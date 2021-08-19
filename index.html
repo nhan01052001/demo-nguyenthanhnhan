@@ -20,6 +20,36 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+.row-the_band {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* tạo ra 1 lớp giả để cho class row có thể ôm trọn con của nó */
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.colum {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.colum-2 {
+    width: 50%;
+}
+
+.colum-full {
+    width: 100%;
+}
+
 /* cach khac phuc khi su dung float */
 .clear {
     clear: both;
@@ -114,7 +144,7 @@ li {
     margin-top: 46px;
     padding-top: 50%;
     background-color: #ccc;
-    background-image: url(https://www.w3schools.com/w3images/chicago.jpg);
+    background-image: url(../img/chicago.jpeg);
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -150,7 +180,7 @@ li {
 
 #content  .content-section {
     width: 800px;
-    padding: 64px 10px;
+    padding: 64px 10px 112px;
     /* padding: 64px 0; */
     margin: auto;
 }
@@ -438,13 +468,90 @@ li {
 
 /* end modal */
 
+
+/* begin: contact */
+
+.content-contact {
+    margin-top: 50px;
+}
+
+.colum-font-contact-left {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.colum-font-contact-right {
+    font-size: 15px;
+}
+
+.colum-font-contact-left p i {
+    width: 30px;
+    display: inline-block;
+}
+
+.colum-font-contact-right .form-control {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.btn-contact-send {
+    margin-top: 8px;
+    margin-left: 8px;
+    padding: 9px 18px;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-contact-send:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* end: contact */
+
+/* begin: map section */
+.map-section img {
+    width: 100%;
+}
+/* begin: map section */
+
 #content-section {
 
 }
 
 #footer {
-
+    text-align: center;
+    padding: 64px 16px;
+    color: #757575;
 }
+
+#footer .list-social {
+    font-size: 24px;
+}
+
+#footer .list-social a {
+    color: rgb(0, 0, 0, 0.5)
+}
+
+#footer .list-social a:hover {
+    opacity: 0.6;
+}
+
+.copy-right {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.copy-right a {
+    color: #757575;
+    text-decoration: underline;
+}
+
 
 </style>
 
@@ -581,13 +688,68 @@ li {
              <div class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub_heading">Fan? Drop a note!</p>
+                <div class="row content-contact">
+                    <div class="colum colum-2 colum-font-contact-left">
+                        <p>
+                            <i class="fa fa-map-marker"></i> Chicago, US
+                        </p>
+                        <p>
+                            <i class="fa fa-phone"></i> Phone: +00 151515
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope"></i> Email: mail@mail.com
+                        </p>
+                    </div>
+                    <div class="colum colum-2 colum-font-contact-right">
+                        <form action="">
+                            <div class="row">
+                                <div class="colum colum-2">
+                                    <input type="text" name="Name" placeholder="Name" required class="form-control">
+                                </div>
+                                <div class="colum colum-2">
+                                    <input type="email" name="Email" placeholder="Email" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="colum colum-full">
+                                    <input type="text" name="Message" placeholder="Message" required class="form-control">
+                                </div>
+                            </div>
+                            <input type="submit" value="Send" class="btn-contact-send">
+                        </form>
+                    </div>
+                </div>
             </div>
             <!-- End Contact section -->
+            <div class="map-section">
+                <img src="https://www.w3schools.com/w3images/map.jpg" alt="map">
+            </div>
 
         </div>
 
         <div id="footer">
-            
+            <div class="list-social">
+                <a href="https://www.facebook.com/profile.php?id=100008600641026" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa fa-snapchat-ghost"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-pinterest"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <p class="copy-right">Powered by <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm">w3.css</a></p>
+        </div>
         </div>
     </div>
 
