@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>index</title>
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* cach khac phuc khi su dung float */
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+#wrap-page {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 24px;
+    line-height: 46px;
+}
+
+#nav li a {
+    text-decoration: none;
+    display: block;
+}
+
+#nav > li:hover > a,
+.sub-nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .sub-nav {
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sub-nav li a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav li:hover .sub-nav {
+    display: block;
+}
+
+.btn-search-header {
+    float: right;
+    line-height: 46px;
+    padding: 0 22px;
+    cursor: pointer;
+}
+
+#header .btn-search-header .search-icon {
+    color: #fff;
+    font-size: 20px;
+}
+
+#header .btn-search-header:hover {
+    background-color: #f44336;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background-color: #ccc;
+    background-image: url(https://www.w3schools.com/w3images/chicago.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#slider .text-img-slider {
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    bottom: 47px;
+    /* Can giu bang position */
+    /* left: 50%;
+    transform: translate(-50%); */
+    text-align: center;
+}
+
+#slider .text-img-slider .text-title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+#slider .text-img-slider .text-description {
+    font-size: 15px;
+}
+
+#content {
+    
+}
+
+/* begin: css all for content-section */
+
+#content  .content-section {
+    width: 800px;
+    padding: 64px 10px;
+    /* padding: 64px 0; */
+    margin: auto;
+}
+
+#content .section-heading, .section-sub_heading {
+    text-align: center;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    margin: 10px 0 25px;
+    font-weight: 500;
+    /* cac chu cach nhau ra */
+    letter-spacing: 4px;
+}
+
+#content .section-sub_heading {
+    font-size: 15px;
+    /* margin-top: 15px; */
+    margin-bottom: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* end: css all for content-section */
+
+/* begin: css for about-section */
+
+#content .content-section .about-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .list-members {
+    margin-top: 47px;
+    /* Cach khac phuc 1: nêu không có overflow: hidden; thì .list-member không thể ôm hếthh
+    các thẻ con bên trong nó */
+    /* overflow: hidden; */
+}
+
+#content .list-members .one-member {
+    float: left;
+    width: 33.333333%;
+    text-align: center;
+}
+
+#content .name-member {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+#content .avatar-member {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* end: css for about-section */
+
+/* begin: css for tour-section */
+
+
+#content .tour-section {
+    background-color: #000;
+}
+
+#content .tour-section .list-tickets {
+    background-color: #fff;
+}
+
+.list-tickets li {
+    font-size: 15px;
+    padding: 9px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.list-tickets .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 4px 4px;
+    margin-left: 16px;
+}
+
+.list-tickets .remaining {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    float: right;
+}
+
+.tour-section .content-section .list-place {
+    /* margin-top: 32px;
+    margin-left: -8px;
+    margin-right: -8px; */
+    /* Viet gon cai o tren */
+    margin: 32px -8px 48px;
+    /* overflow: hidden; */
+}
+
+.list-place .one-place {
+    width: 33.3333333%;
+    float: left;
+    padding: 0 8px;
+}
+
+.one-place .img-place {
+    width: 100%;
+    /* display: block; */
+}
+
+.one-place .img-place:hover {
+    opacity: 0.6;
+}
+
+.one-place .content-place {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.content-place .heading-place {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 550px;
+}
+
+.content-place .time-place {
+    /* margin-top: 15px; */
+    margin: 15px 0;
+    color: #757575;
+}
+
+.content-place .desc-palce {
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.content-place .btnBuy {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.content-place .btnBuy:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+/* end: css for tour-section */
+
+/* begin modal */
+
+.modal-buy-tickets {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-buy-tickets.open {
+    display: flex;
+}
+
+@keyframes modal-tickets {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-buy-tickets .modal-container {
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    background-color: #fff;
+    position: relative;
+    animation: modal-tickets ease 0.6s;
+}
+
+.modal-buy-tickets .modal-container .modal-header {
+    height: 130px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-bag-modal-tickets {
+    margin-right: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-buy-tickets .modal-container .modal-body {
+    padding: 16px;
+}
+
+.modal-body .modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-body .modal-input {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+
+#modal-btn-buy-tickets {
+    width: 100%;
+    padding: 17px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    background-color: #009688;
+    cursor: pointer;
+}
+
+#modal-btn-buy-tickets:hover {
+    opacity: 0.8;
+}
+
+.modal-buy-tickets .modal-container .modal-footer {
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 16px;
+}
+
+.modal-footer > .btn-close-footer > span {
+    /* display: block; */
+    padding: 8px 12px;
+    float:left;
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-footer > .btn-close-footer > span:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-footer > .modal-help > a {
+    color: #2196f3;
+}
+
+/* end modal */
+
+#content-section {
+
+}
+
+#footer {
+
+}
+
+</style>
+
+<body>
+
+    <div id="wrap-page">
+        <div id="header">
+            <!-- begin nav -->
+            <ul id="nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>                  
+                    <a href="#">Band</a>
+                </li>
+                <li>                  
+                    <a href="#">Tour</a>
+                </li>
+                <li>                    
+                    <a href="#">Contact</a>
+                </li>
+                <li>                    
+                    <a href="#">More <i class="fa fa-caret-down"></i></a>
+                    <ul class="sub-nav">
+                        <li>
+                            <a href="#">Merchandise</a>
+                        </li>
+                        <li>
+                            <a href="#">Extras</a>
+                        </li>
+                        <li>
+                            <a href="#">Media</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- end nav -->
+
+            <!-- begin search -->
+            <div class="btn-search-header">
+                <i class="search-icon fa fa-search"></i>
+            </div>
+            <!-- end nav -->
+        </div>
+
+        <div id="slider">
+            <div class="text-img-slider">
+                <h2 class="text-title">Chicago</h2>
+                <div class="text-description">Thank you, Chicago - A night we won't forget.</div>
+            </div>
+        </div>
+
+        <div id="content">
+
+            <!-- Begin About section -->
+            <div class="content-section">
+                <h2 class="section-heading">THE BAND</h2>
+                <p class="section-sub_heading">We love music</p>
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="list-members">
+                    <div class="one-member">
+                        <p class="name-member">Name</p>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="avatar-member">
+                    </div>
+                    <div class="one-member">
+                        <p class="name-member">Name</p>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="avatar-member">
+                    </div>
+                    <div class="one-member">
+                        <p class="name-member">Name</p>
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Name" class="avatar-member">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!-- End About section -->
+
+             <!-- Begin Tour section -->
+            <div class="tour-section">
+                <div class="content-section">
+                     <h2 class="section-heading text-white">TOUR DATES</h2>
+                     <p class="section-sub_heading text-white">Remember to book your tickets!</p>
+                    <ul class="list-tickets">
+                        <li>September
+                            <span class="sold-out">Sold out</span>
+                        </li>
+                        <li>October
+                            <span class="sold-out">Sold out</span>
+                        </li>
+                        <li>November
+                            <span class="remaining">3</span>
+                        </li>
+                    </ul>
+
+                    <!-- Place -->
+                    <div class="list-place">
+                        <div class="one-place">
+                            <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="new york" class="img-place">
+                            <div class="content-place">
+                                <h3 class="heading-place">New York</h3>
+                                <p class="time-place">Fri 27 Nov 2016</p>
+                                <p class="desc-palce">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="btnBuy js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="one-place">
+                            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="new york" class="img-place">
+                            <div class="content-place">
+                                <h3 class="heading-place">Paris</h3>
+                                <p class="time-place">Sat 28 Nov 2016</p>
+                                <p class="desc-palce">sPraesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="btnBuy js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="one-place">
+                            <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="new york" class="img-place">
+                            <div class="content-place">
+                                <h3 class="heading-place">San Francisco</h3>
+                                <p class="time-place">Sun 29 Nov 2016</p>
+                                <p class="desc-palce">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="btnBuy js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+             </div>
+            <!-- End Tour section -->
+
+             <!-- Begin Contact section -->
+             <div class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub_heading">Fan? Drop a note!</p>
+            </div>
+            <!-- End Contact section -->
+
+        </div>
+
+        <div id="footer">
+            
+        </div>
+    </div>
+
+    <div id="xxx-modal-xxx" class="modal-buy-tickets">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="fa icon-close-modal-tickets">&#xf00d;</i>
+            </div>
+            <div class="modal-header">
+                <i class="fa icon-bag-modal-tickets">&#xf0f2;</i>
+                <p>Tickets</p>
+            </div>
+
+            <div class="modal-body">
+                <label for="how-many" class="modal-label">
+                    <i class="fa icon-cart-modal-tickets">&#xf07a;</i>
+                    Tickets, $15 per person
+                </label>
+                <input type="text" id="how-many" class="modal-input" placeholder="How many ?">
+
+                <label for="enter-email" class="modal-label">
+                    <i class='fa icon-user-modal-tickets'>&#xf007;</i>
+                    Send to
+                </label>
+                <input type="text" id="enter-email" class="modal-input" placeholder="Enter email">
+
+                <!-- button -->
+                <button id="modal-btn-buy-tickets">
+                    PAY <i class="fa icon-check-modal-tickets">&#xf00c;</i>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-close-footer js-modal-close">
+                    <span>CLOSE</span>
+                </div>
+                <div class="modal-help">
+                    Need <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm" target="_blank">help ?</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+<!-- <script src="../js/js_index.js"></script> -->
+<script>
+    const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const obj = {
+
+    open_modal_tickets: function() {
+        const btnBuys = $$('.js-buy-ticket');
+        const modal = $('#xxx-modal-xxx');
+        const btnCloses = $$('.js-modal-close');
+        const modal_container = $('.js-modal-container')
+
+        function open() {
+            modal.classList.add('open')
+        }
+
+        function close() {
+            modal.classList.remove('open')
+        }
+
+        for(const btnBuy of btnBuys) {
+            btnBuy.addEventListener('click', open)
+        }
+
+        for(const btnClose of btnCloses) {
+            btnClose.addEventListener('click', close)
+        }
+
+        modal.addEventListener('click', close)
+
+        modal_container.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+    },
+
+    start: function() {
+        this.open_modal_tickets();
+    },
+};
+
+obj.start();
+</script>
+</body>
+</html>
